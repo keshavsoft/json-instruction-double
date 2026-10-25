@@ -1,6 +1,6 @@
 {
     "name": "json-instruction-double",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "type": "module",
     "main": "src/index.js",
     "exports": {
@@ -12,7 +12,8 @@
     ],
     "dependencies": {
         "json-instruction-guards": "^1.0.0",
-        "json-write-path": "^1.2.1",
-        "json-transformer-funcs-two-dimensions": "^1.5.2"
+        "json-source-path": "^1.2.1",
+        "json-transformer-funcs-two-dimensions": "^1.5.2",
+        "json-write-path": "^1.2.1"
     }
 }
