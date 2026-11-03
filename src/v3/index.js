@@ -3,18 +3,22 @@ import fromCollection from "json-transformer-funcs-one-dimension";
 import twoDimensional from "json-transformer-funcs-two-dimensions";
 
 import writePath from "json-write-path";
-
-import spec from "./spec.json" with {type: "json"};
+import fallbackSpec from "spec-repo";
 
 const functions = { applyTemplate, fromCollection, twoDimensional };
 
 const runSingleInstruction = (instruction, registry, showLog, returnLog) => {
+  const localShowLog = showLog;
+  console.log("localShowLog : ", localShowLog);
 
-  const result = functions[instruction.func](
-    registry.data.columns,
-    registry.data.data,
-    spec
-  );
+  const localSpec = registry?.spec ?? fallbackSpec;
+
+  const result = functions[instruction.func]({
+    columns: registry.data.columns,
+    data: registry.data.data,
+    columnSpec: localSpec["buildBodyCell"],
+    rowSpec: localSpec["buildBodyTr"]
+  });
 
   writePath(registry, instruction.destinationPath, result);
 };

@@ -11,5 +11,9 @@
         "openingRate": "1200.00/kgs"
       }
     ]
+  },
+  {
+    "itemName": "item2",
+    "baseUnit": "nos"
   }
 ]

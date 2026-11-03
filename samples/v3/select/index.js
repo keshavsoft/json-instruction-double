@@ -12,6 +12,6 @@ runDoubleInstructions(instruction, {
         columns,
         data
     }
-}, false, []);
+}, true, []);
 
 console.log("body 1 : ", base.children[2].children[0]);

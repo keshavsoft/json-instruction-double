@@ -1,53 +1,13 @@
 {
-    "tagName": "table",
-    "attributes": {
-        "class": "table table-hover table-striped align-middle border mb-0"
-    },
+    "tagName": "div",
     "children": [
         {
-            "tagName": "colgroup",
+            "tagName": "datalist",
             "attributes": {
-                "data-role": "table-colgroup"
+                "id": "datalist-id",
+                "data-role": "datalist-dataRole"
             },
             "children": []
-        },
-        {
-            "tagName": "thead",
-            "attributes": {
-                "class": "table-dark",
-                "data-role": "table-header"
-            },
-            "children": [
-                {
-                    "tagName": "tr",
-                    "attributes": {
-                        "data-role": "table-header-row"
-                    },
-                    "children": []
-                }
-            ]
-        },
-        {
-            "tagName": "tbody",
-            "attributes": {
-                "data-role": "table-body"
-            },
-            "children": []
-        },
-        {
-            "tagName": "tfoot",
-            "attributes": {
-                "data-role": "table-footer"
-            },
-            "children": [
-                {
-                    "tagName": "tr",
-                    "attributes": {
-                        "data-role": "table-footer-row"
-                    },
-                    "children": []
-                }
-            ]
         }
     ]
 }
